@@ -8,29 +8,25 @@
 <script>
     var number = parseInt(prompt("Nhập số lượng số nguyên tố cần hiển thị"));
     var dem = 0;
-    var n = 1;
+    var n = 2;
     function Snt(a) {
-        if (a <= 2) {
-            return false;
-        } else if (a == 2) {
-            return  true;
-        } else {
-            for (var i = 3; i <= Math.sqrt(a); i++) {
+        for (var i = 2; i <= Math.sqrt(a); i++) {
                 if (a % i == 0) {
-                    return kq = false;
+                    return false;
                 }
             }
             return true
-        }
+
     }
 
     while (dem < number) {
         if (Snt(n) == true) {
-            document.write(n + "<br>");
+            document.write(n + " ");
             dem++;
         }
-        n++
+        n++;
     }
+
 </script>
 </body>
 </html>
